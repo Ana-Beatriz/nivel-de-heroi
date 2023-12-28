@@ -1,10 +1,9 @@
 let readline = require("readline-sync")
 let nivel
 
-let nome = readline.question("Qual o nome do seu Heroi?\n")
-let xp = parseInt(readline.question("Quanto seu heroi tem de XP?\n"))
-
 do {
+    let nome = readline.question("Qual o nome do seu Heroi?\n")
+    let xp = parseInt(readline.question("Quanto seu heroi tem de XP?\n"))
     if (xp >= 0 && xp <= 1000) {
         nivel = "Ferro"
     } else {
@@ -39,9 +38,6 @@ do {
 
     console.log(`O Herói de nome **${nome}** está no nível de **${nivel}**`)
 
-    let repet = readline.question("Nova classificacao? S/N\n")
+    var repet = readline.question("Nova classificacao? S/N\n")
 
-    nome = readline.question("Qual o nome do seu Heroi?\n")
-    xp = parseInt(readline.question("Quanto seu heroi tem de XP?\n"))
-
-} while (resp != "N")
+} while (repet != "N")
